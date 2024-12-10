@@ -1,0 +1,109 @@
+/* MyStyle.css */
+*{
+    font-family: 'Mali';
+}
+h1{
+    width: 500px;
+    height: 50px;
+    font-size: 20pt;
+    text-align: center;
+    border: 5px solid rgb(13, 0, 255);
+    background-color: skyblue;
+    
+}
+h1.myh1{
+    font-size: 25pt;
+    margin: 20px;
+}
+body{
+
+    background-image: linear-gradient(to right, #ec80ff, #b300ff);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+   
+}
+
+input[type]:hover{
+    background-color: rgb(146, 252, 215);
+    cursor: pointer;
+   transition: background-color-color 0.3s;
+}
+input[type="radio"]:hover{
+    background-color: rgb(255, 0, 0);
+}
+select:hover,textarea:hover{
+    background-color: rgb(146, 252, 215);
+}
+
+input[type="text"]:focus,input[type="number"]:focus {
+    outline: none;
+    border-color: rgb(0, 170, 255);
+}
+
+input[type="radio"]:checked {
+   accent-color: rgb(1, 255, 22);
+}
+textarea:focus{
+    outline: none;
+    border-color:aqua ;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+}
+
+label{
+    display: inline-block;
+    width: 120px;
+    margin-right: 10px;
+
+}
+form div{
+    
+    margin-top: 5px;
+}
+input[type ="text"]{
+    display: inline-block;
+    margin-left: 30px;
+}
+input[type ="date"]{
+    display: inline-block;
+    margin-left: 30px;
+}
+input[type = "number"]{
+    display: inline-block;
+    margin-left: 30px;
+}
+input[type = "file"]{
+    display: none;
+    width: 200px;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+textarea{
+    width: 180px;
+    margin-left: 30px;
+    border: 2px solid;
+    resize: vertical;
+}
+select{
+    margin-left: 30px;
+}
+input[type = "checkbox"]{
+    margin-top: 20px;
+}
+input[type="submit"]{
+    margin-top: 20px;
+    margin-left: 150px;
+}
+.radio-group input{
+    margin-left: 30px; 
+}
+.radio-group input[type ="radio"]{
+    margin-right: 0px;
+}
+.move-up{
+    position: relative;
+    bottom: 40px;
+}
