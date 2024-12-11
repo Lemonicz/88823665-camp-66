@@ -29,29 +29,49 @@ body{
 input[type]:hover{
     background-color: rgb(146, 252, 215);
     cursor: pointer;
-   transition: background-color-color 0.3s;
 }
 input[type="radio"]:hover{
     background-color: rgb(255, 0, 0);
 }
 select:hover,textarea:hover{
+    border: 3px solid;
     background-color: rgb(146, 252, 215);
 }
 
 input[type="text"]:focus,input[type="number"]:focus {
     outline: none;
+    border: 3px solid ;
     border-color: rgb(0, 170, 255);
+    background-color: rgb(207, 207, 207);
 }
+input[type="submit"]:hover{
+    transform: scale(3);
 
+
+    background: linear-gradient(90deg,violet,rgb(157, 21, 255),blue,rgb(11, 255, 11),rgb(232, 255, 101),orange,red);
+}
+input[type="reset"]:hover{
+    transform: scale(1.3);
+    background-color: red;
+}
+input[type="submit"] label{ 
+    color: aqua;
+}
+.button{
+    color: aquamarine;
+}
 input[type="radio"]:checked {
    accent-color: rgb(1, 255, 22);
 }
 textarea:focus{
     outline: none;
     border-color:aqua ;
-    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+    background-color: rgb(207, 207, 207);
 }
-
+input[type="reset"]{
+    background-color: red ;
+}
 label{
     display: inline-block;
     width: 120px;
@@ -61,6 +81,12 @@ label{
 form div{
     
     margin-top: 5px;
+}
+form{
+    padding: 40px;
+    border: 5px solid rgb(0, 255, 68);
+    background-color: rgb(255, 90, 178);
+   
 }
 input[type ="text"]{
     display: inline-block;
@@ -106,4 +132,10 @@ input[type="submit"]{
 .move-up{
     position: relative;
     bottom: 40px;
+}
+.purple {
+    color: var(--BlueBright);
+}
+.root{
+    --BlueBright: rgb(1, 230, 255) ;
 }
