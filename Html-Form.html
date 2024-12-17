@@ -3,79 +3,123 @@
 <head>
     <title>Workshop</title>
     <meta charset="UTF=8">
-    <link rel="stylesheet" href="MyStyle.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">     
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"
 
 </head>
 <body>
-    
+    <script src="js/bootstrap.min.js"></script> 
     <h1>
-        Workshop #HTML-FORMS
+        Workshop #HTML-FORMS-BS5-Template
     </h1>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form div{
+            margin-top: 5px;
+        }
+        .custom-input{
+            width: 350px;
+        }
+        .form-row {
+            display: flex;
+            align-items: center;
+        }
+        .form-row label{
+            margin-right: 10px;
+        }
+        .radio-group{
+           display: flex;
+           flex-direction: column;
+        }
+        .form-check{
+            display: block;
+        }
     
+       
+    </style>
     <form>
-        <div>
-            <label for="firstName">ชื่อ</label>
-            <input type="text" id="name" name="firstName"><br>
+        <div class="form-row">
+            <label for="firstName" class="col-sm-3 col-form-label">ชื่อ</label>
+            <input type="text" class="form-control custom-input" id="name" name="firstName"><br>
+    
         </div>
 
-        <div>
-            <label for="LastName">สกุล</label>
-            <input type="text"><br>
+        <div class="form-row">
+            <label for="LastName" class="col-sm-3 col-form-label">สกุล</label>
+            <input type="text" class="form-control custom-input"><br>
         </div>
 
-        <div>
-            <label for="date">วัน/เดือน/ปีเกิด</label>
-            <input type="date"><br>
+        <div class="form-row">
+            <label for="date" class="col-sm-3 col-form-label">วัน/เดือน/ปีเกิด</label>
+            <input type="date" class="form-control custom-input"><br>
         </div>
 
-        <div>
-            <label for="Age">อายุ</label>
-            <input type="number"><br>
+        <div class="form-row">
+            <label for="Age" class="col-sm-3 col-form-label">อายุ</label>
+            <input type="number" class="form-control custom-input"><br>
         </div>
-        
-        <div class="radio-group">
-            <label for="Sex">เพศ</label>
-            <input type="radio" name="sex" value="Male">ชาย
-            <input type="radio" name="sex" value="Female">หญิง <br>
-        </div>
-
-        <div>
-            <label for="Pic">รูป</label>
-            <input type="file"><br>
-        </div>
-
-        <div>
-            <label for="Address" class="move-up">ที่อยู่</label>
-            <textarea rows="4" cols="20"></textarea><br>
+        <div class="form-row">
+            <label for="gender" class="col-sm-3 col-form-label ">เพศ</label>
+           <div class="radio-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+                <label class="form-check-label" for="male">ชาย</label>
+            </div>
+            
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                <label class="form-check-label" for="female">หญิง</label>
+            </div>
+           </div>
         </div>
 
-        <div>
-            <label for="FavColor">สีที่ชอบ</label>
-            <select id="color">
-                <option value="red">สีแดง</option>
+        <div class="form-row">
+            <label for="Pic"class="col-sm-3 col-form-label">รูป</label>
+            <input type="file"  class="custom-input "><br>
+        </div>
+
+        <div class="form-row">
+            <label for="Address" class="move-up col-sm-3 col-form-label "  >ที่อยู่</label>
+            <textarea rows="4" cols="20" class="form-control custom-input"></textarea><br>
+        </div>
+
+        <div class="form-row">
+            <label for="FavColor" class="col-sm-3 col-form-label">สีที่ชอบ</label>
+            <select id="color" class="form-select custom-input">
+                <option value="red" >สีแดง</option>
                 <option value="blue">สีน้ำเงิน</option>
                 <option value="Yellow">สีเหลือง</option>
             </select><br>
         </div>
 
-        <div class = "radio-group">
-            <label for="Song">แนวเพลงที่ชอบ</label>
-            <input type="radio" name="stylesong" value="Life">เพื่อชีวิต
-            <input type="radio" name="stylesong" value="country">ลูกทุ่ง
-            <input type="radio" name="stylesong" value="else">อื่นๆ<br>
+        <div class="form-row">
+            <label for="Song" class="col-sm-3 col-form-label">แนวเพลงที่ชอบ</label>
+        <div class="form-group">
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="stylesong" value="Life">เพื่อชีวิต
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="stylesong" value="country">ลูกทุ่ง
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="stylesong" value="else">อื่นๆ
+            </div>
+        </div>
         </div>
 
-        <div>
-            <input type="checkbox"> ยินยอมให้เก็บข้อมูล <br>
+        <div class="form-check ">
+            <input class="form-check-input" class="form-label" type="checkbox"> ยินยอมให้เก็บข้อมูล <br>
         </div>
 
-        <div >
-            <input type="reset" class="purple" value="Reset" >
-            <input type="submit" value="Submit">
+        <div class="form-group d-flex justify-content-between mt-3" >
+            <input type="reset" class="btn btn-secondary"  value="Reset" >
+        
+            <input type="submit" class="btn btn-primary " value="Submit">
         </div>
     </form>
 </body>
