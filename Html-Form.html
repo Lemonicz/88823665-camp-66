@@ -11,23 +11,24 @@
 <body>
     <script src="js/bootstrap.min.js"></script> 
     <h1>
-        Workshop #HTML-FORMS-BS5-Template
+       
     </h1>
     <style>
         body{
             display: flex;
             flex-direction: column;
-            align-items: center;
+            margin-right: 30px;
         }
         form div{
             margin-top: 5px;
         }
         .custom-input{
-            width: 350px;
+            width: 500px;
         }
         .form-row {
             display: flex;
-            align-items: center;
+            align-items: baseline;
+            padding-left: 200px;
         }
         .form-row label{
             margin-right: 10px;
@@ -39,13 +40,23 @@
         .form-check{
             display: block;
         }
+        input[type = "file"]{
+        display: none;
+        width: 500px;
+        display: inline-block;
+        border-radius: 5px;
+
+    }
+    .move-left-submit{
+        padding-right: 440px;
+    }
     
-       
+
     </style>
     <form>
         <div class="form-row">
-            <label for="firstName" class="col-sm-3 col-form-label">ชื่อ</label>
-            <input type="text" class="form-control custom-input" id="name" name="firstName" required>
+            <label for="firstName" class="col-sm-3 col-form-label" id="name">ชื่อ</label>
+            <input type="text" class="form-control custom-input" id="name" name="firstName"  placeholder="ชื่อ" required>
     
         </div>
 
@@ -78,9 +89,9 @@
            </div>
         </div>
 
-        <div class="form-row">
-            <label for="Pic"class="col-sm-3 col-form-label">รูป</label>
-            <input type="file"  class="custom-input " >
+        <div class="form-row custom-file">
+            <label for="Pic"class="col-sm-3 ">รูป</label>
+            <input type="file"  class="form-control-file border custom-file" id="customFIle" >
         </div>
 
         <div class="form-row">
@@ -112,14 +123,17 @@
         </div>
         </div>
 
-        <div class="form-check ">
-            <input class="form-check-input" class="form-label" type="checkbox" required> ยินยอมให้เก็บข้อมูล 
+        <div class="form-check form-row">
+            <input class="form-check-input " type="checkbox" required> ยินยอมให้เก็บข้อมูล 
         </div>
 
-        <div class="form-group d-flex justify-content-between mt-3" >
-            <input type="reset" class="btn btn-secondary"  value="Reset" >
-        
+        <div class="form-group d-flex form-row justify-content-between  ">
+            <div class="form-group d-flex ">
+            <input type="reset" class="btn btn-secondary " value="Reset">
+            </div>
+            <div class="form-group d-flex  move-left-submit">
             <input type="submit" class="btn btn-primary " value="Submit">
+            </div>
         </div>
     </form>
 </body>
