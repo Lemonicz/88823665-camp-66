@@ -19,16 +19,26 @@
         <h1>เลขคู่ หรือ เลขคี่</h1>
         <div class="mt-3">
             <label for="Start">เริ่มต้น</label>
-            <input type="number" class="form-control-sm" id="start" >
+            <input type="number" class="form-control-sm" id="start" name="start">
         </div>
         <div class="mt-4">
             <label for="end">สิ้นสุด</label>
-            <input type="number" class="form-control-sm" id="end">
+            <input type="number" class="form-control-sm" id="end" name="end">
+        </div>
+        <div>
+            <input type="submit" value="ส่งข้อมูล" class="btn btn-primary btn-sm container mt-3">
         </div>
         <?php
         if($_SERVER["REQUEST_METHOD"]== "POST"){
             $Start = $_POST['start'];
             $end = $_POST['end'];
+            for($i = $Start ; $i <= $end  ; $i++){
+                if($i %2 != 0){
+                    echo $i." เป็นเลขคี่"."<br>";
+                }else{
+                    echo $i." เป็นเลขคู่"."<br>";
+                }
+            }
         }
         ?>
     </form>
