@@ -30,14 +30,19 @@
         </div>
         <?php
         if($_SERVER["REQUEST_METHOD"]== "POST"){
+            if(isset($_POST['start']) && isset($_POST['end']) && !empty($_POST['start']) && !empty($_POST['end'])){
             $Start = $_POST['start'];
             $end = $_POST['end'];
+        
             for($i = $Start ; $i <= $end  ; $i++){
                 if($i %2 != 0){
                     echo $i." เป็นเลขคี่"."<br>";
                 }else{
                     echo $i." เป็นเลขคู่"."<br>";
                 }
+            }
+            }else{
+                echo "ข้อมูลไม่เพียงพอ";
             }
         }
         ?>
