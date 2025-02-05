@@ -15,24 +15,29 @@
           </div>
           <div class="card-body register-card-body">
             <p class="register-box-msg">Register a new membership</p>
-            <form action="../index3.html" method="post">
+            <form action=" {{ url('/register') }}" method="post">
+                @csrf
               <div class="input-group mb-1">
                 <div class="form-floating">
-                  <input id="registerFullName" type="text" class="form-control" placeholder="" />
+                  <input id="registerFullName" type="text" name="name" id="name" class="form-control" placeholder="" />
                   <label for="registerFullName">Full Name</label>
                 </div>
                 <div class="input-group-text"><span class="bi bi-person"></span></div>
+                <div class="valid feedback">
+                    ok
+                </div>
+
               </div>
               <div class="input-group mb-1">
                 <div class="form-floating">
-                  <input id="registerEmail" type="email" class="form-control" placeholder="" />
+                  <input id="registerEmail" type="email" name="email" id="email" class="form-control" placeholder="" />
                   <label for="registerEmail">Email</label>
                 </div>
                 <div class="input-group-text"><span class="bi bi-envelope"></span></div>
               </div>
               <div class="input-group mb-1">
                 <div class="form-floating">
-                  <input id="registerPassword" type="password" class="form-control" placeholder="" />
+                  <input id="registerPassword" type="password" name="password" id="pass" class="form-control" placeholder="" />
                   <label for="registerPassword">Password</label>
                 </div>
                 <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
@@ -57,6 +62,9 @@
               </div>
               <!--end::Row-->
             </form>
+            <div>
+                <button class="btn" onclick="myfunction()">Click Me</button>
+            </div>
             <div class="social-auth-links text-center mb-3 d-grid gap-2">
               <p>- OR -</p>
               <a href="#" class="btn btn-primary">
@@ -76,4 +84,27 @@
       </div>
       <!-- /.register-box -->
 </div>
+@endsection
+
+@section('script')
+<script>
+    let $myval1
+    var $myval2 ="value of myval2"
+    const myval3 = ""
+
+    console.log("Hello world");
+    //alert("Hello world");
+   //ALERT("Hello world");
+   function myfunction(){
+    let name = document.getElementByid('name')
+    name = $('#name')
+    let email = document.getElementByid('email')
+    let pass = document.getElementByid('pass')
+    let mycheckbox = document.getElementByid('mycheckbox')
+    name.value = "My name Value"
+    name.val("My name value")
+    console.log(name.value , email.value , pass.value , mycheckbox.checked)
+
+   }
+</script>
 @endsection
