@@ -122,12 +122,13 @@
        name.removeClass('is-invalid');$('#invalid-name').hide();
     }
     let emailValue = email.val().trim();
+    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (emailValue === "") {
         email.addClass('is-invalid');
         $('#invalid-email').html("กรุณากรอกอีเมล");
         $('#invalid-email').show();
         return false;
-    } else if (emailValue.indexOf('@') === -1 || emailValue.indexOf('.') === -1) {
+    } else if (!emailRegex.test(emailValue)) {
         email.addClass('is-invalid');
         $('#invalid-email').html("กรุณากรอกอีเมลที่ถูกต้อง");
         $('#invalid-email').show();

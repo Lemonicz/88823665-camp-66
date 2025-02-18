@@ -89,6 +89,9 @@
     <script src="{{ url('public/js/adminlte.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
       const Default = {
